@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    FW
+ * @package     FW_MSN_Adcenter
+ * @copyright   Copyright (c) 2011 F+W Media, Inc. (http://www.fwmedia.com)
+ */
+-->
+<config>    
+    <modules>
+        <FW_MSN_Adcenter>
+            <version>1.0.0</version>
+        </FW_MSN_Adcenter>
+    </modules>
+    <global>
+        <models>
+            <fw_msn_adcenter>
+                <class>FW_MSN_Adcenter_Model</class>
+            </fw_msn_adcenter>
+        </models>
+        <blocks>
+            <fw_msn_adcenter>
+                <class>FW_MSN_Adcenter_Block</class>
+            </fw_msn_adcenter>
+        </blocks>
+        <helpers>
+            <fw_msn_adcenter>
+                <class>FW_MSN_Adcenter_Helper</class>
+            </fw_msn_adcenter>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <fw_msn_adcenter_order_success>
+                        <class>fw_msn_adcenter/observer</class>
+                        <method>onOrderSuccessPageView</method>
+                    </fw_msn_adcenter_order_success>
+                </observers>
+            </checkout_onepage_controller_success_action>
+            <checkout_multishipping_controller_success_action>
+                <observers>
+                    <fw_msn_adcenter_order_success>
+                        <class>fw_msn_adcenter/observer</class>
+                        <method>onOrderSuccessPageView</method>
+                    </fw_msn_adcenter_order_success>
+                </observers>
+            </checkout_multishipping_controller_success_action>
+        </events>
+    </frontend>
+</config>

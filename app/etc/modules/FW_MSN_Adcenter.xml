@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+         <FW_MSN_Adcenter>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <FW_Admin/>
+            </depends>
+        </FW_MSN_Adcenter>
+    </modules>
+</config>
